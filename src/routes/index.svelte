@@ -44,6 +44,4 @@
 
 <Hero {...cur_hero_movie}  />
 
-<h1>{cur_hero_movie.overview}</h1>
 
-hey this is u movies

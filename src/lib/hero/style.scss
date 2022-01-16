@@ -1,5 +1,29 @@
-div {
+.wrapper {
     padding-top: 5rem;
-    background-color: grey;
-    height: 30rem;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 35rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // background-color: black;
+    z-index: 1;
+    background: linear-gradient(to bottom, black, black 5%, transparent 70%, black);
+}
+
+
+.inner {
+    width: calc(100vw - 10%);
+	margin: 1rem auto;
+    position: relative;
+	// display: flex;
+    z-index: 20;
+	margin: 0 auto;
 }
