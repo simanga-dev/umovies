@@ -1,16 +1,21 @@
 @use 'src/styles/mixins' as *;
 
 header {
+    width: 100vw;
 	position: relative;
 	padding: 0.5rem 0;
 	margin: 0 0 3rem 0;
     top: 0;
     position: fixed ;
+    background-color: black;
+    // background: linear-gradient(to left, 0% black, black 50%, transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%, transparent);
 	// box-shadow: 0 2px 2px -2px rgb(255 255 255 / 10%);
 }
 
 .inner {
 	@include flex($justify: between, $align: center);
+    // background-color: red;
 	// width: 90%;
     width: calc(100vw - 10%);
 	margin: 1rem auto;
@@ -43,7 +48,7 @@ ul {
 }
 
 .nav-title {
-	font-family: var(--font-mono);
+	// font-family: var(--font-mono);
 	margin: 0;
 	font-size: 2rem;
 	font-weight: bold;
@@ -82,7 +87,7 @@ li.active {
 }
 
 nav a {
-	font-family: var(--font-mono);
+	// font-family: var(--font-mono);
 	display: flex;
 	height: 100%;
 	align-items: center;

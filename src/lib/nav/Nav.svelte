@@ -87,13 +87,14 @@
 				</li>
 			</ul>
 
+		</nav>
             <div class="">
-
             <button>Login</button>
             <button>Sign up</button>
-
             </div>
-		</nav>
+
+        
+
 	</div>
 </header>
 
