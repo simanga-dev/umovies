@@ -8,6 +8,7 @@ header {
     top: 0;
     z-index: 20;
     position: fixed ;
+    color: var(--pure-white);
     // background-color: black;
     // background: linear-gradient(to left, 0% black, black 50%, transparent);
     // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%, transparent);
@@ -46,13 +47,13 @@ ul {
 	@include flex();
 }
 
-.nav-title {
-	// font-family: var(--font-mono);
-	margin: 0;
-	font-size: 2rem;
-	font-weight: bold;
-	color: var(--secondary-color);
-}
+// .nav-title {
+// 	// font-family: var(--font-mono);
+// 	margin: 0;
+// 	font-size: 2rem;
+// 	font-weight: bold;
+// 	color: var(--secondary-color);
+// }
 
 .nav-title-link {
 	text-decoration: none;
@@ -90,17 +91,18 @@ nav a {
 	display: flex;
 	height: 100%;
 	align-items: center;
-	padding: 0 1em;
+	padding: 0.5em 1em;
 	text-decoration: none;
+	color: var(--pure-white);
 }
 
 a:hover {
 	color: var(--accent-color);
 }
 
-a:visited {
-	color: var(--accent-color);
-}
+// nav.desk ul li a:visited {
+// 	// color: var(--pure-white);
+// }
 
 aside {
 	position: absolute;
@@ -157,4 +159,8 @@ aside ul li.active {
 	.desk {
 		display: block;
 	}
+}
+.auth {
+    display: flex;
+    align-items: center;
 }

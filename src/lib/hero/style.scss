@@ -1,10 +1,13 @@
+@use 'src/styles/mixins' as *;
+
 .wrapper {
-    padding-top: 5rem;
+    padding: 5rem 0;
     background-color: black;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 35rem;
+	@include flex($justify: end, $direction: column);
 }
 
 .overlay {
@@ -13,17 +16,51 @@
     bottom: 0;
     left: 0;
     right: 0;
-    // background-color: black;
     z-index: 1;
-    background: linear-gradient(to bottom, black, black 5%, transparent 70%, black);
+    background: linear-gradient(to bottom, black, black 5%, transparent 50%, black 95%);
+    // background: linear-gradient(0deg, #000000 30%,transparent, #000000 100%);
+}
+
+.detail {
+    margin: 0 auto 0 0;
+	// @include flex($justify: between, $direction: column);
+
+    width: 50%;
 }
 
 
 .inner {
     width: calc(100vw - 10%);
 	margin: 1rem auto;
+	@include flex($align: end);
     position: relative;
-	// display: flex;
+	display: flex;
+    align-items: flex-end;
+
     z-index: 20;
 	margin: 0 auto;
 }
+.date {
+    font-size: 1.2rem;
+}
+
+ h3 {
+    margin: 0;
+    padding: .3em 0;
+    font-size: 2rem;
+    border-bottom: 4px solid rgba(255, 255, 255, .2);
+}
+.overview {
+    font-size: 1.2rem;
+    font-weight: normal;
+    // font-weight: 300;
+}
+
+.indicator span {
+    display: inline-block;
+    width: 2rem;
+    height: 4px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, .5)
+}
+

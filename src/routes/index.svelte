@@ -1,5 +1,9 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
+    import Recommendation from '$lib/recomendationSection/recomendation.svelte'
+    import Promo from '$lib/promoSection/promo.svelte'
+    import MovieByLocaton from '$lib/movieByLocation/movieByLocation.svelte'
+    import MovieByActor from '$lib/movieByActorSection/movieByActor.svelte'
 	// export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
@@ -19,6 +23,8 @@
 
 <script lang="ts">
 	import Hero from '$lib/hero/Hero.svelte';
+import Recomendation from '$lib/recomendationSection/recomendation.svelte';
+
 
 	export let res_json;
 
@@ -44,4 +50,8 @@
 
 <Hero {...cur_hero_movie}  />
 
+<Recommendation />
+<Promo />
+<MovieByLocaton />
+<MovieByActor />
 

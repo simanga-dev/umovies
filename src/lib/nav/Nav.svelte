@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Button from '$lib/button/button.svelte';
+
 	let sidebarVisible = false;
 	let sidebar: HTMLElement;
 	let sidebarButton: SVGSVGElement;
@@ -29,7 +31,7 @@
 	<div class="inner">
 		<a class="nav-title-link" href="/">
 			<!-- <h2 class="nav-title">Umovies</h2> -->
-            <img src="static/logo-umovies.png" alt="Website logo">
+			<img src="static/logo-umovies.png" alt="Website logo" />
 		</a>
 
 		<nav class="mobi">
@@ -49,22 +51,21 @@
 
 			<aside class:visible={sidebarVisible} bind:this={sidebar}>
 				<ul>
-				<li class:active={$page.url.pathname === '/'}>
-					<a sveltekit:prefetch href="/">Movies</a>
-				</li>
-				<li class:active={$page.url.pathname === '/projects'}>
-					<a sveltekit:prefetch href="/Shows">Shows</a>
-				</li>
-				<li class:active={$page.url.pathname === '/about'}>
-					<a sveltekit:prefetch href="/Actors">Actors</a>
-				</li>
-				<li class:active={$page.url.pathname === '/News'}>
-					<a sveltekit:prefetch href="/News">News</a>
-				</li>
-				<li class:active={$page.url.pathname === '/about'}>
-					<a sveltekit:prefetch href="/Community">Community</a>
-				</li>
-			
+					<li class:active={$page.url.pathname === '/'}>
+						<a sveltekit:prefetch href="/">Movies</a>
+					</li>
+					<li class:active={$page.url.pathname === '/projects'}>
+						<a sveltekit:prefetch href="/Shows">Shows</a>
+					</li>
+					<li class:active={$page.url.pathname === '/about'}>
+						<a sveltekit:prefetch href="/Actors">Actors</a>
+					</li>
+					<li class:active={$page.url.pathname === '/News'}>
+						<a sveltekit:prefetch href="/News">News</a>
+					</li>
+					<li class:active={$page.url.pathname === '/about'}>
+						<a sveltekit:prefetch href="/Community">Community</a>
+					</li>
 				</ul>
 			</aside>
 		</nav>
@@ -73,28 +74,25 @@
 				<li class:active={$page.url.pathname === '/'}>
 					<a sveltekit:prefetch href="/">Movies</a>
 				</li>
-				<li class:active={$page.url.pathname === '/projects'}>
-					<a sveltekit:prefetch href="/Shows">Shows</a>
+				<li class:active={$page.url.pathname === '/shows'}>
+					<a sveltekit:prefetch href="/">Shows</a>
 				</li>
-				<li class:active={$page.url.pathname === '/about'}>
-					<a sveltekit:prefetch href="/Actors">Actors</a>
+				<li class:active={$page.url.pathname === '/actors'}>
+					<a sveltekit:prefetch href="/">Actors</a>
 				</li>
 				<li class:active={$page.url.pathname === '/News'}>
-					<a sveltekit:prefetch href="/News">News</a>
+					<a sveltekit:prefetch href="/">News</a>
 				</li>
-				<li class:active={$page.url.pathname === '/about'}>
-					<a sveltekit:prefetch href="/Community">Community</a>
+				<li class:active={$page.url.pathname === '/community'}>
+					<a sveltekit:prefetch href="/">Community</a>
 				</li>
 			</ul>
-
 		</nav>
-            <div class="">
-            <button>Login</button>
-            <button>Sign up</button>
-            </div>
-
-        
-
+		<div class="auth">
+			<Button href="/login">Login</Button>
+			&nbsp; &nbsp; &nbsp; &nbsp;
+			<Button>Sign up</Button>
+		</div>
 	</div>
 </header>
 
