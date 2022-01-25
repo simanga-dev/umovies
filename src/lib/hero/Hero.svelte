@@ -6,6 +6,8 @@
 	export let release_date: string;
 	export let vote_average: Number;
 	export let backdrop_path: string;
+	export let index: number;
+    
 
 	const monthNames = [
 		'Jan',
@@ -22,6 +24,8 @@
 		'Dec'
 	];
 
+
+
 	let monthIndex = Number(release_date.split('-')[1]) - 1;
 
 	function limitCharacter(str: string) {
@@ -30,7 +34,6 @@
 		}
 		return str;
 	}
-	console.log(limitCharacter(overview));
 </script>
 
 <div
@@ -58,7 +61,7 @@
 			<Button>Book Movie</Button>
 		</div>
 
-		<div class="indicator">
+		<div class="indicator indicator-{index}" >
 			<span />
             <span />
             <span />

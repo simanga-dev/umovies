@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    background: linear-gradient(to bottom, black, black 5%, transparent 50%, black 95%);
+    background: linear-gradient(to bottom, black, black 5%, rgba(0,0,0, .5) 50%, black 95%);
     // background: linear-gradient(0deg, #000000 30%,transparent, #000000 100%);
 }
 
@@ -63,4 +63,12 @@
     border-radius: 30px;
     background-color: rgba(255, 255, 255, .5)
 }
-
+.indicator-0 span:nth-child(1),
+.indicator-1 span:nth-child(2),
+.indicator-2 span:nth-child(3),
+.indicator-3 span:nth-child(4),
+.indicator-4 span:nth-child(5),
+.indicator-5 span:nth-child(6)
+{
+    background-color: red;
+}

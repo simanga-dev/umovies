@@ -1,4 +1,6 @@
-<div class="">Hello I am recomedation</div>
+<section class="recommedation">
+	<div class="inner" />
+</section>
 
 <style>
 	div {

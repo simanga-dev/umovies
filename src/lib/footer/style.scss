@@ -1,0 +1,29 @@
+footer {
+    padding: 4rem;
+
+}
+
+.inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    // align-items: center;
+    justify-items: center;
+
+}
+
+.col_2 ul {
+
+    list-style: none;
+    padding: 0;
+    color: white;
+
+}
+
+.col_2 ul li a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px
+}
