@@ -1,5 +1,39 @@
 @use 'src/styles/mixins' as *;
 
+:root {
+  --star-size: 50px;
+  --star-color: rgba(255, 255, 255, 0.5);
+  --star-background: #ED8A19;
+}
+
+.rating {
+  --percent: calc(var(--rating) / 10 * 100%);
+
+  padding: 0;
+
+  display: inline-block;
+  font-size: var(--star-size);
+  // font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+
+  // background-color: red;
+  &::before {
+    content: '★★★★★';
+    transform: translateY(5px);
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  span {
+      font-size: 1.4rem;
+      padding-left: 1rem;
+
+  }
+
+  }
+
 .wrapper {
     padding: 5rem 0;
     background-color: black;
