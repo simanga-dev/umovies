@@ -1,38 +1,26 @@
-# create-svelte
+# Umovies - A movie Web Application
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Umovies is a demonstration of a movie website built with [SvelteKit](https://kit.svelte.dev/)
+and [The Movie Databse (TMDB)](https://www.themoviedb.org/).
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Why?
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+I love to develop Web Application and I want to learn more about SvelteKit. In some way, I wanted to test my skills in SvelteKit.
+*All in all, Just for the fun of it*
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
 
-> Note: the `@next` is temporary
+## Run local.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+You must have [node](https://nodejs.org/en/) installed in  your machine,
+clone this repo and run `npm install` in the root directory of this project.
 
 ```bash
-npm run dev
+# Run a development server
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm run dev --port 3000 
 ```
 
-## Building
+## Contribution
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+All type of Contribution is Welcome
