@@ -1,8 +1,5 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
-
-	// export const prerender = true;
-
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch('/index.json');
 		if (res.ok) {
@@ -20,16 +17,21 @@
 
 <script lang="ts">
 	import {
-		RecomandationSection,
+		Carousel
+	} from '$lib';
+    import { 
 		PromoSection,
 		MoviesAndTVShowsSection,
 		TopActorsSection,
-		Carousel
-	} from '$lib';
+		RecomandationSection,
+    } from '$layout'
 
 	export let res_json;
+	export let error;
 
 	const hero_movies = res_json.res_popular_json.results.slice(0, 6);
+
+    console.log(error)
 
 	let index = 0;
 	setInterval(() => {
@@ -41,18 +43,21 @@
 	}, 10000);
 
 	$: cur_hero_movie = hero_movies[index];
+
+    console.log(error)
 </script>
 
 <svelte:head>
 	<title>Umovies</title>
 </svelte:head>
 
-<Carousel {...cur_hero_movie} {index} />
+	<Carousel {...cur_hero_movie} {index} />
 
-<RecomandationSection movies={res_json.res_trending_json.results} />
+	<RecomandationSection movies={res_json.res_trending_json.results} />
 
-<PromoSection />
+	<PromoSection />
 
-<MoviesAndTVShowsSection movies={res_json.res_trending_json.results} />
+	<MoviesAndTVShowsSection movies={res_json.res_trending_json.results} />
 
-<TopActorsSection />
+	<TopActorsSection people={res_json.res_people_json.results} />
+

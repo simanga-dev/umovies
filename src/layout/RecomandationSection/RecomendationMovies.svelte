@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { Card, CardsWrapper  } from '$lib';
+	import { Card, CardsWrapper, InnerWrapper  } from '$lib';
 
 	export let movies;
 </script>
 
 <section class="recommedation">
-	<div class="inner">
+	<InnerWrapper>
 		<div class="header">
 			<h3>
 				<span> Top Actions </span>
@@ -26,7 +26,7 @@
 				<div class="">something went wrong</div>
 			{/if}
 		</CardsWrapper>
-	</div>
+	</InnerWrapper>
 </section>
 
 <style src="./Style.scss"></style>

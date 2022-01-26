@@ -4,12 +4,16 @@
 	export let variant: 'movieWide' | 'moviePoster' | 'actor' = 'moviePoster';
 
 	export let overview: string;
-	// export let vote_count: number;
+	export let vote_count: number;
 	export let title: string;
 	export let release_date: string;
-	// export let vote_average: number;
+	export let vote_average: number;
 	export let backdrop_path: string;
 	export let poster_path: string;
+	export let adult: boolean;
+
+
+
 </script>
 
 {#if variant === 'movieWide'}

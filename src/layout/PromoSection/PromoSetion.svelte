@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Button } from '$lib';
+	import { Button, InnerWrapper } from '$lib';
 </script>
 
 <div class="promo">
-	<div class="inner">
+	<InnerWrapper>
 		<div class="left">
 			<h4>
 				<span>Get a 40% OFF for first</span>
@@ -17,7 +17,7 @@
 			</h4>
 			<Button>SIGN UP</Button>
 		</div>
-	</div>
+	</InnerWrapper>
 </div>
 
 <style src="./Style.scss"></style>

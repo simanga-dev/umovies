@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Card, CardsWrapper  } from '$lib';
+	import { Card, CardsWrapper, InnerWrapper  } from '$lib';
     export let movies;
 </script>
 <section class="movie-by-locaton">
-	<div class="inner">
+	<InnerWrapper>
 		<div class="header">
 			<div class="gentre">
 				<h4>Movies</h4>
@@ -25,7 +25,7 @@
 			{/if}
 		</CardsWrapper>
 
-	</div>
+	</InnerWrapper>
 </section>
 
 <style src="./Style.scss"></style>

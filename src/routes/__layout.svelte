@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navbar, Footer  } from '$lib';
+	import { Navbar, Footer  } from '$layout';
 </script>
 
 

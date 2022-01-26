@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Navbar } from '$lib';
+	import { Button, InnerWrapper } from '$lib';
 
 	export let overview: string;
 	export let vote_count: number;
@@ -41,7 +41,7 @@
 
 
 	<div class="overlay" />
-	<div class="inner">
+	<InnerWrapper>
 		<div class="detail">
 			<span class="date">
 				{release_date.split('-')[2]}
@@ -81,7 +81,7 @@
 			<span />
 			<span />
 		</div>
-	</div>
+	</InnerWrapper>
 </div>
 
-<style lang="scss" src="./Style.svelte"></style>
+<style lang="scss" src="./Style.scss"></style>

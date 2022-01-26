@@ -1,0 +1,14 @@
+@use 'src/styles/mixins' as *;
+
+header {
+    @include flex($justify: between, $align: center);
+
+}
+
+.search.btn {
+ @include flex();
+
+ form {
+     padding-right: 1rem;
+ }
+}
