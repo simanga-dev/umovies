@@ -1,5 +1,10 @@
 @use 'src/styles/mixins' as *;
 
+
+.top-actors {
+    padding: 4rem;
+}
+
 header {
     @include flex($justify: between, $align: center);
 

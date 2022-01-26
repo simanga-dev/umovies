@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { InnerWrapper, CardsWrapper, Card } from '$lib';
-    export let people;
-    console.log(people)
+	import { InnerWrapper, CardsWrapper, ActorCard } from '$lib';
+	export let people;
 </script>
 
 <div class="top-actors">
@@ -22,18 +21,38 @@
 				</div>
 			</div>
 		</header>
-<CardsWrapper>
-
+		<CardsWrapper>
 			{#if people.length > 0}
 				{#each people as person}
-					<Card {...person} variant="actor" />
+					<ActorCard {...person} variant="actor" />
 				{/each}
 			{:else}
 				<div class="">something went wrong</div>
 			{/if}
-		
-</CardsWrapper>
+		</CardsWrapper>
 
+		<div class="more-info">
+			<div class="actor-details">more information about the actore</div>
+
+			<div class="movie-list">
+				<h3>Best Films / Popular / Latest</h3>
+				<CardsWrapper >
+
+			{#if people.length > 0}
+				<!-- {#each person.known_for as person} -->
+					<!-- <ActorCard {...person} variant="actor" /> -->
+
+        This is complicated but I will give myself time.
+        I will get it
+
+			{:else}
+				<div class="">something went wrong</div>
+			{/if}
+		
+
+                				</CardsWrapper>
+			</div>
+		</div>
 	</InnerWrapper>
 </div>
 
