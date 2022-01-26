@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Button from '$lib/button/button.svelte';
+	import { Button } from '$lib';
 
 	let sidebarVisible = false;
 	let sidebar: HTMLElement;
@@ -96,4 +96,4 @@
 	</div>
 </header>
 
-<style lang="scss" src="style.scss"></style>
+<style lang="scss" src="./Style.scss"></style>

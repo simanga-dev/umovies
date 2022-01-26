@@ -1,8 +1,8 @@
 <script lang="ts">
-	import PlayIcon from '$lib/svgs/playIcon.svelte';
-	import Button from '$lib/button/button.svelte';
+	import { Button, Navbar } from '$lib';
+
 	export let overview: string;
-	export let vote_count: number;;
+	export let vote_count: number;
 	export let title: string;
 	export let release_date: string;
 	export let vote_average: Number;
@@ -38,6 +38,8 @@
 	class="wrapper"
 	style="background-image: url('https://www.themoviedb.org/t/p/original/{backdrop_path}')"
 >
+
+
 	<div class="overlay" />
 	<div class="inner">
 		<div class="detail">
@@ -56,13 +58,15 @@
 				style="--rating: {vote_average};"
 				aria-label="Rating of this product is 2.3 out of 5."
 			>
-            <span>
-			{vote_count} Votes
-            </span>
+				<span>
+					{vote_count} Votes
+				</span>
 			</div>
 
 			<Button href="www.youtube.com">
+				<!--
 				<PlayIcon />
+                -->
 				Watch Trailer
 			</Button>
 
@@ -80,4 +84,4 @@
 	</div>
 </div>
 
-<style lang="scss" src="style.scss"></style>
+<style lang="scss" src="./Style.svelte"></style>

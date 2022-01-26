@@ -13,4 +13,4 @@
 	</button>
 {/if}
 
-<style src="./style.scss" lang="scss"></style>
+<style src="./Style.scss" lang="scss"></style>

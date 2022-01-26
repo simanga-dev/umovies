@@ -1,16 +1,12 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
-	import Recommendation from '$lib/recomendationSection/recomendation.svelte';
-	import Promo from '$lib/promoSection/promo.svelte';
-	import MovieByLocaton from '$lib/movieByLocation/movieByLocation.svelte';
-	import MovieByActor from '$lib/movieByActorSection/movieByActor.svelte';
+
 	// export const prerender = true;
 
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch('/index.json');
 		if (res.ok) {
 			const res_json = await res.json();
-            console.log(res_json)
 			return {
 				props: { res_json }
 			};
@@ -23,8 +19,13 @@
 </script>
 
 <script lang="ts">
-	import Recomendation from '$lib/recomendationSection/recomendation.svelte';
-	import Hero from '$lib/hero/Hero.svelte';
+	import {
+		RecomandationSection,
+		PromoSection,
+		MoviesAndTVShowsSection,
+		TopActorsSection,
+		Carousel
+	} from '$lib';
 
 	export let res_json;
 
@@ -46,9 +47,12 @@
 	<title>Umovies</title>
 </svelte:head>
 
-<Hero {...cur_hero_movie} index={index} />
+<Carousel {...cur_hero_movie} {index} />
 
-<Recommendation />
-<Promo />
-<MovieByLocaton />
-<MovieByActor />
+<RecomandationSection movies={res_json.res_trending_json.results} />
+
+<PromoSection />
+
+<MoviesAndTVShowsSection movies={res_json.res_trending_json.results} />
+
+<TopActorsSection />

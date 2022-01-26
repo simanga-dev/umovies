@@ -1,0 +1,27 @@
+.card-wide{
+    min-width: 30rem;
+    // background-color: red;
+}
+
+.card-wide img {
+    width: 100%;
+}
+
+.card-poster {
+    min-width: 14.375rem;
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.cards {
+    padding: 2rem 0 0 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 2rem;
+    
+    // overflow-x: auto;
+}
+

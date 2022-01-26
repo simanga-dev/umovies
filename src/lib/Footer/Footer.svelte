@@ -1,8 +1,9 @@
 <script lang="ts">
-	import LinkedinLogo from '$lib/svgs/linkedinIcon.svelte';
-	import FacebookLogo from '$lib/svgs/facebookLogo.svelte';
-	import TwitterLogo from '$lib/svgs/twitterLogo.svelte';
-	import Button from '$lib/button/button.svelte';
+	/* import LinkedinLogo from '$lib/svgs/linkedinIcon.svelte'; */
+	/* import FacebookLogo from '$lib/svgs/facebookLogo.svelte'; */
+	/* import TwitterLogo from '$lib/svgs/twitterLogo.svelte'; */
+
+	import { Button } from '$lib';
 </script>
 
 <footer>
@@ -13,9 +14,11 @@
 			Designed and Copyrights By
 			<a href=""> Jayprakash Kachare </a>
 		</p>
+        <!--
 		<FacebookLogo />
 		<TwitterLogo />
 		<LinkedinLogo />
+        -->
 	</div>
 
 	<div class="col_2">
@@ -40,4 +43,4 @@
 </div>
 </footer>
 
-<style lang="scss" src="./style.scss"></style>
+<style lang="scss" src="./Style.scss"></style>

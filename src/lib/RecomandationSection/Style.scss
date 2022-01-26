@@ -1,0 +1,22 @@
+.recommedation {
+    padding-top: 3rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 0;
+	span {
+		display: block;
+	}
+}
+
+.inner {
+    width: calc(100vw - 10%);
+	// background-color: red;
+    margin: 0 auto;
+}
+

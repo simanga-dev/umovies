@@ -27,19 +27,23 @@
   }
 
   span {
+      display: inline-block;
       font-size: 1.4rem;
       padding-left: 1rem;
+      transform: translateY(-3px)
+      // padding-bottom: 30px;
+    
 
   }
 
   }
 
 .wrapper {
+    position: relative;
     padding: 5rem 0;
     background-color: black;
     background-size: cover;
     background-position: center;
-    position: relative;
     height: 35rem;
 	@include flex($justify: end, $direction: column);
 }
@@ -58,7 +62,6 @@
 .detail {
     margin: 0 auto 0 0;
 	// @include flex($justify: between, $direction: column);
-
     width: 50%;
 }
 
@@ -70,6 +73,7 @@
     position: relative;
 	display: flex;
     align-items: flex-end;
+    position: relative;
 
     z-index: 20;
 	margin: 0 auto;
@@ -106,3 +110,10 @@
 {
     background-color: red;
 }
+
+.jjj {
+    position: fixed;
+    background: red;
+    height: 4rem;
+    with: 4rem;
+    }

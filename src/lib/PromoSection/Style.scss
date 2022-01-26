@@ -1,0 +1,35 @@
+
+
+.promo {
+    // background: linear-gradient(to bottom, black, transparen)
+    padding: 2rem 0;
+
+
+    }
+
+    .inner {
+        max-width: calc(100vw - 10%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+
+        .right {
+            display: flex;
+            justify-content: space-between;
+            justify-self: end;
+        }
+    }
+
+    h4 {
+        margin: 0;
+        
+        span {
+            display: block;
+        }
+    }
+
+.right h4 {
+    padding-right: 5rem;
+
+}
+
