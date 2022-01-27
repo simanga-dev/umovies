@@ -1,4 +1,13 @@
-.inner {
-    width: calc(100vw - 10%);
+@use 'src/styles/mixins' as *;
+
+.inner-wrapper {
+	width: calc(100vw - 10%);
 	margin: 1rem auto;
+
+	&.navbar {
+		@include flex($justify: between, $align: center);
+		margin: 1rem auto;
+		margin: 0 auto;
+
+	}
 }

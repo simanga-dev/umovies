@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { Button } from '$lib';
+	import { Button, InnerWrapper } from '$lib';
 
 	let sidebarVisible = false;
 	let sidebar: HTMLElement;
@@ -28,10 +28,11 @@
 <svelte:window on:click={handleOuterClick} />
 
 <header>
-	<div class="inner">
+	<InnerWrapper class="navbar">
 		<a class="nav-title-link" href="/">
-			<!-- <h2 class="nav-title">Umovies</h2> -->
-			<img src="static/logo-umovies.png" alt="Website logo" />
+			<div class="logo-img">
+				<img src="static/logo-umovies.png" alt="umovies website logo" />
+			</div>
 		</a>
 
 		<nav class="mobi">
@@ -67,9 +68,15 @@
 						<a sveltekit:prefetch href="/Community">Community</a>
 					</li>
 				</ul>
+
+				<div class="auth-btn">
+					<Button href="/#">Login</Button>
+					&nbsp; &nbsp;
+					<Button>Sign up</Button>
+				</div>
 			</aside>
 		</nav>
-		<nav class="desk">
+		<div class="desk">
 			<ul>
 				<li class:active={$page.url.pathname === '/'}>
 					<a sveltekit:prefetch href="/">Movies</a>
@@ -87,13 +94,14 @@
 					<a sveltekit:prefetch href="/">Community</a>
 				</li>
 			</ul>
-		</nav>
-		<div class="auth">
-			<Button href="/login">Login</Button>
-			&nbsp; &nbsp; &nbsp; &nbsp;
-			<Button>Sign up</Button>
 		</div>
-	</div>
+
+		<div class="desk auth-btn">
+			<Button href="/#">Login</Button>
+			&nbsp; &nbsp;
+			<Button>SIGN UP</Button>
+		</div>
+	</InnerWrapper>
 </header>
 
 <style lang="scss" src="./Style.scss"></style>
