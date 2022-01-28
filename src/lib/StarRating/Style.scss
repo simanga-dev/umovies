@@ -1,0 +1,24 @@
+.rating {
+  --percent: calc(var(--rating) / 10 * 100%);
+  padding: 0;
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+
+  &::before {
+    content: '★★★★★';
+    transform: translateY(5px);
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--accent-color-2) var(--percent), var(--background-without-opacity) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  span {
+      display: inline-block;
+      font-size: 1.4rem;
+      padding-left: 1rem;
+      transform: translateY(-3px)
+  }
+}

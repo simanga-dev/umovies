@@ -8,6 +8,17 @@
 		@include flex($justify: between, $align: center);
 		margin: 1rem auto;
 		margin: 0 auto;
+	}
 
+	&.hero-section {
+		@include flex($direction: column);
+		z-index: 20;
+	}
+
+	@media (min-width: 850px) {
+		&.hero-section {
+			// @include flex($direction: column);
+			@include flex($justify: between, $align: end);
+		}
 	}
 }

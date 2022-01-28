@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { Button, InnerWrapper } from '$lib';
+	import { Button, InnerWrapper, StarRating, Icon } from '$lib';
+	// import PlayIcon from 'static/';
 
 	export let overview: string;
 	export let vote_count: number;
 	export let title: string;
 	export let release_date: string;
-	export let vote_average: Number;
+	export let vote_average: number;
 	export let backdrop_path: string;
 	export let index: number;
 
@@ -28,46 +29,37 @@
 
 	function limitCharacter(str: string) {
 		if (str.length > 197) {
-			return str.slice(0, 197) + '... more';
+			return str.slice(0, 197) + ' ...';
 		}
 		return str;
 	}
 </script>
 
-<div
+<section
 	class="wrapper"
 	style="background-image: url('https://www.themoviedb.org/t/p/original/{backdrop_path}')"
 >
-
-
 	<div class="overlay" />
-	<InnerWrapper>
+	<InnerWrapper class="hero-section">
 		<div class="detail">
 			<span class="date">
 				{release_date.split('-')[2]}
 				{monthNames[monthIndex]}
 				{release_date.split('-')[0]}
 			</span>
-			<h3>
+			<h2 class="title">
 				{title}
-			</h3>
-			<p class="overview">{limitCharacter(overview)}</p>
+			</h2>
+			<p class="overview">{limitCharacter(overview)} <a href="/#">read more</a></p>
 
-			<div
-				class="rating"
-				style="--rating: {vote_average};"
-				aria-label="Rating of this product is 2.3 out of 5."
-			>
-				<span>
-					{vote_count} Votes
-				</span>
+			<div class="votes">
+				<StarRating rating={vote_average} />
+				<h3>{vote_count} Votes</h3>
 			</div>
 
-			<Button href="www.youtube.com">
-				<!--
-				<PlayIcon />
-                -->
-				Watch Trailer
+			<Button href="/">
+				<Icon name="play" class="play-icon" />
+				&nbsp; &nbsp; Watch Trailer
 			</Button>
 
 			<Button>Book Movie</Button>
@@ -82,6 +74,6 @@
 			<span />
 		</div>
 	</InnerWrapper>
-</div>
+</section>
 
 <style lang="scss" src="./Style.scss"></style>

@@ -4,3 +4,4 @@ export { default as RecomandationSection } from "./RecomandationSection/Recomend
 export { default as PromoSection } from "./PromoSection/PromoSetion.svelte"
 export { default as TopActorsSection } from "./TopActorsSection/TopActorSection.svelte"
 export { default as Navbar } from "./Navbar/Navbar.svelte"
+export  { default as  HeroSection } from './HeroSection/HeroSection.svelte'

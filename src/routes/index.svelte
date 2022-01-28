@@ -16,8 +16,8 @@
 </script>
 
 <script lang="ts">
-	import { Carousel } from '$lib';
 	import {
+		HeroSection,
 		PromoSection,
 		MoviesAndTVShowsSection,
 		TopActorsSection,
@@ -29,7 +29,6 @@
 
 	const hero_movies = res_json.res_popular_json.results.slice(0, 6);
 
-
 	let index = 0;
 	setInterval(() => {
 		index = index + 1;
@@ -40,14 +39,13 @@
 	}, 10000);
 
 	$: cur_hero_movie = hero_movies[index];
-
 </script>
 
 <svelte:head>
-	<title>Umovies</title>
+	<title>Umovies ▪ Book a movie</title>
 </svelte:head>
 
-<Carousel {...cur_hero_movie} {index} />
+<HeroSection {...cur_hero_movie} {index} />
 
 <RecomandationSection movies={res_json.res_trending_json.results} />
 
@@ -56,6 +54,5 @@
 <MoviesAndTVShowsSection movies={res_json.res_trending_json.results} />
 
 <TopActorsSection people={res_json.res_people_json.results} />
-
 
 <PromoSection variant="gradient" />
