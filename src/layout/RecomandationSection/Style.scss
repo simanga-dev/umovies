@@ -1,22 +1,41 @@
-.recommedation {
+@use 'src/styles/mixins' as *;
+
+section {
     padding-top: 3rem;
+
+    .header {
+        @include flex($justify: between, $align: center);
+        padding-bottom: 2rem;;
+
+    }
+    .header h3 {
+		margin: 0;
+		font-size: 1rem;
+		padding: 0 0 0.5rem 0;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 600;
+		color: var(--pure-white);
+		border-bottom: 1px solid var(--background-without-opacity);
+    }
+
+   .header h3 span {
+       display: block;
+       font-size: 1rem;
+       font-weight: 400;
+       padding-bottom: .2rem;
+       
+   }
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-}
 
-h3 {
-    margin: 0;
-	span {
-		display: block;
-	}
-}
+@media (min-width: 450px) {
+    section {
 
-.inner {
-    width: calc(100vw - 10%);
-	// background-color: red;
-    margin: 0 auto;
-}
+        .header h3 {
+		font-size: 1.3rem;
+		letter-spacing: 4px;
+        }
+    }
 
+}

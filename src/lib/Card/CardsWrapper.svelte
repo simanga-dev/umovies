@@ -1,4 +1,8 @@
-<div class="cards">
+<script lang="ts">
+	export let className = '';
+	export { className as class };
+</script>
+<div class="cards-wrapper {className || ''}">
 	<slot />
 </div>
 

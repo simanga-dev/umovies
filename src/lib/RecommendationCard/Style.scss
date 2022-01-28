@@ -1,0 +1,45 @@
+@use 'src/styles/mixins' as *;
+
+.recommendation-card {
+    display: block;
+    
+    img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .title {
+		text-transform: uppercase;
+		color: var(--pure-white);
+		margin: 0;
+		padding: 2rem 0 0.5rem 0;
+		letter-spacing: 2px;
+		font-size: 1.1rem;
+    }
+
+	.overview {
+		padding: 0 0 0.5rem 0;
+		font-size: 1rem;
+		font-weight: normal;
+        line-height: 1.2;
+		margin: 0;
+	}
+
+	.votes {
+		@include flex($align: center);
+		padding: 0 0 1rem 0;
+		margin: 0;
+	}
+
+
+	h3 {
+		display: inline-block;
+		margin: 0;
+		font-size: 1rem;
+		font-weight: normal;
+        padding-left: 1rem;
+		// border-bottom: 4px solid rgba(255, 255, 255, .2);
+	}
+
+
+}

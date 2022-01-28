@@ -1,3 +1,5 @@
+@use 'src/styles/mixins' as *;
+
 .card-wide{
     min-width: 30rem;
     // background-color: red;
@@ -16,12 +18,17 @@
     }
 }
 
-.cards {
+.cards-wrapper {
     padding: 2rem 0 0 0;
     display: grid;
     grid-auto-flow: column;
-    grid-column-gap: 2rem;
+    // grid-column-gap: 2rem;
+    overflow-x: auto;
+
+    &.recommendation {
+        display: flex;
     
-    // overflow-x: auto;
+
+    }
 }
 

@@ -59,7 +59,7 @@
 
 			<Button href="/">
 				<Icon name="play" class="play-icon" />
-				&nbsp; &nbsp; Watch Trailer
+				&nbsp; Watch Trailer
 			</Button>
 
 			<Button>Book Movie</Button>
