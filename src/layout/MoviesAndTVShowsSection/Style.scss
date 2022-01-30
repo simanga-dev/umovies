@@ -1,6 +1,32 @@
+@use 'src/styles/mixins' as *;
+
 .movie-by-locaton {
-    padding: 4rem;
+    padding: 1rem;
     background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+
+    .header {
+        // background-color: red;
+        padding-bottom: 2rem;
+       @include flex($align: center) ;
+    }
+
+    .tap {
+       @include flex() ;
+        
+    }
+    .tap h3 {
+		text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: var(	--background-without-opacity);
+        cursor: pointer;
+        
+    }
+
+    .tap h3:first-child {
+        padding-right: 1rem;
+
+    }
 }
 
 .header, .gentre {

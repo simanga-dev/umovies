@@ -1,6 +1,6 @@
 @use 'src/styles/mixins' as *;
 
-button {
+.btn {
 	border: none;
 	display: flex;
 	color: white;
@@ -13,6 +13,13 @@ button {
 	padding: 0.5rem 1rem;
 	text-align: center;
 	text-transform: capitalize;
+
+    &.gradient {
+        // background-color: blue;
+        background-image: linear-gradient(to right, red, green);
+        // background-color: linear-gradient( red, green);
+
+    }
 }
 
 a {

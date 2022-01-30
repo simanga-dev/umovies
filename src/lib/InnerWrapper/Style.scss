@@ -15,10 +15,21 @@
 		z-index: 20;
 	}
 
+    &.promo-section {
+		// @include flex($justify: between, $align: center);
+        // background-color: red;
+    }
+
 	@media (min-width: 850px) {
 		&.hero-section {
 			// @include flex($direction: column);
 			@include flex($justify: between, $align: end);
 		}
+
+    &.promo-section {
+		@include flex($justify: between, $align: center);
+        // background-color: red;
+    }
+
 	}
 }

@@ -1,4 +1,6 @@
 <script lang="ts">
+
+	export let variant: 'standard' | 'gradient' | 'no-bg' = 'standard';
 	export let href = undefined;
 	export let disabled = false;
 </script>
@@ -8,7 +10,7 @@
 		<slot />
 	</a>
 {:else}
-	<button>
+	<button class="btn {variant}">
 		<slot />
 	</button>
 {/if}

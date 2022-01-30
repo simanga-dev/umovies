@@ -1,30 +1,68 @@
 <script lang="ts">
-	import { Card, CardsWrapper, InnerWrapper  } from '$lib';
-    export let movies;
+	import { Card, PostarCard, InnerWrapper, Icon } from '$lib';
+	import { Navigation, Keyboard } from 'swiper';
+	import { Swiper, SwiperSlide } from 'swiper/svelte';
+
+	import 'swiper/scss';
+
+	export let movies;
 </script>
+
 <section class="movie-by-locaton">
 	<InnerWrapper>
 		<div class="header">
-			<div class="gentre">
-				<h4>Movies</h4>
-				<h4>TV Shows</h4>
+			<div class="tap">
+				<h3>Movies</h3>
+				<h3>TV Shows</h3>
 			</div>
+
 			<div class="arrow-btn">
-				<span>left</span>
-				<span>rigt</span>
+				<Icon name="arrow-left" class="swiper-button-prev-1" />
+				&nbsp;
+				<Icon name="arrow-right" class="swiper-button-next-1" />
 			</div>
 		</div>
 
-		<CardsWrapper>
+		<Swiper
+			modules={[Keyboard, Navigation]}
+            longSwipes={true}
+            resistance={false}
+            speed={300}
+			slidesPerView={2}
+			spaceBetween={20}
+			breakpoints={{
+				320: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+
+                420: {
+					slidesPerView: 3,
+					spaceBetween: 20
+
+                },
+
+				580: {
+					slidesPerView: 5,
+					spaceBetween: 20
+				}
+			}}
+			navigation={{
+				nextEl: '.swiper-button-next-1',
+				prevEl: '.swiper-button-prev-1'
+			}}
+			keyboard={{ enabled: true, onlyInViewport: true }}
+		>
 			{#if movies.length > 0}
 				{#each movies as movie}
-					<Card {...movie} variant="moviePoster" />
+					<SwiperSlide>
+						<PostarCard img={movie.poster_path} />
+					</SwiperSlide>
 				{/each}
 			{:else}
 				<div class="">something went wrong</div>
 			{/if}
-		</CardsWrapper>
-
+		</Swiper>
 	</InnerWrapper>
 </section>
 

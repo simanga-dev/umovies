@@ -1,35 +1,42 @@
+@use 'src/styles/mixins' as *;
 
+.promo-section {
+	padding: 0 0 2rem 0;
 
-.promo {
-    // background: linear-gradient(to bottom, black, transparen)
-    padding: 2rem 0;
+	h4 {
+		text-transform: uppercase;
+		color: var(--pure-white);
+		margin: 0;
+		// padding: 2rem 0 0.5rem 0;
+		// letter-spacing: 2px;
+		font-size: 1.2rem;
+	}
 
+	h4 span {
+		// text-transform: ;
+		font-size: 1rem;
+		text-transform: lowercase;
+		display: block;
+		// background-color: red;
+		font-weight: 400;
+	}
 
-    }
+	.right h4 {
+		// @include flex($justify: between, $align: center);
+        padding: 0 1rem 1rem 0;
+	}
 
-    .inner {
-        max-width: calc(100vw - 10%);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 0 auto;
-
-        .right {
-            display: flex;
-            justify-content: space-between;
-            justify-self: end;
-        }
-    }
-
-    h4 {
-        margin: 0;
-        
-        span {
-            display: block;
-        }
-    }
-
-.right h4 {
-    padding-right: 5rem;
-
+	.left {
+		padding-bottom: 1rem;
+	}
 }
 
+@media (min-width: 850px) {
+	.promo-section {
+		padding: 1rem 0 5rem 0;
+	}
+
+	.right {
+		@include flex($justify: between, $align: center);
+	}
+}
